@@ -96,5 +96,5 @@ cv.destroyAllWindows()  # 열려 있는 모든 윈도우 창을 닫고 프로그
    * `q` 키가 입력되면 루프를 탈출하고 `cv.imwrite()`를 호출하여 최종 이미지를 저장합니다.
 
 ## 🖼 결과물 (`2_result.jpg`)
-![결과 이미지](../images/image2-1.png)
+![결과 이미지](../images/2_result.png)
 

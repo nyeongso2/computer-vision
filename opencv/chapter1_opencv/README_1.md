@@ -44,7 +44,7 @@ else:  # 이미지를 정상적으로 불러왔을 경우 실행합니다.
     cv.imshow('Original and Grayscale', result)
 
     # 작업 완료된 결과 이미지를 '1_result.jpg'라는 이름의 파일로 저장합니다.
-    cv.imwrite(r'c:\opencv_\computer-vision\opencv\01주차 과제\1_result.jpg', result)
+    cv.imwrite(r'c:\opencv_\computer-vision\opencv\chapter1_opencv\1_result.jpg', result)
 
     # 사용자가 키보드에서 아무 키나 누를 때까지 창을 띄운 채로 무한히 기다립니다.
     cv.waitKey(0)
