@@ -126,5 +126,5 @@ cv.destroyAllWindows()  # 모든 창을 닫고 자원을 해제합니다.
    * `r` 키 입력 시 화면을 초기화하고 열려 있는 ROI 창을 닫습니다.
    * `s` 키 입력 시 추출된 `roi` 변수의 데이터를 실제 이미지 파일(`3_result.jpg`)로 저장합니다.
 
-## 🖼 결과물 (`3_result.jpg`)
-![결과 이미지](../images/3_result.jpg)
+## 🖼 결과물 (`3_result.png`)
+![결과 이미지](../images/3_result.png)
