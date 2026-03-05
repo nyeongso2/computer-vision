@@ -58,33 +58,24 @@ else:  # 이미지를 정상적으로 불러왔을 경우 실행합니다.
 
 ## 문제 해결 방법
 
-1. cv.imread()를 사용해서 이미지를 로드합니다.
-    -> img = cv.imread(r'c:\opencv_\computer-vision\opencv\images\soccer.jpg') 에 저장되어있으므로 여기서 사진을 불러옵니다. 
+1. **이미지 로드 및 전처리**
+   * `cv.imread()`를 사용하여 지정된 경로의 이미지(`soccer.jpg`)를 불러옵니다.
+   * `cv.resize()`를 활용해 이미지의 크기를 50%로 축소하여 화면 출력 및 처리에 적합하게 만듭니다.
+   ![alt text](../images/image-1.png)
 
-![alt text](../images/image-1.png) 
+2. **그레이스케일 변환**
+   * `cv.cvtColor()` 함수에 `cv.COLOR_BGR2GRAY` 옵션을 사용하여 컬러 이미지를 흑백으로 변환합니다.
+   * RGB 각 채널의 밝기를 가중 평균하여 하나의 명도 값으로 계산합니다.
+   ![alt text](../images/image-2.png)
 
+3. **이미지 가로 결합 (Horizontal Stack)**
+   * `np.hstack()`을 사용하여 원본 이미지와 흑백 이미지를 가로로 연결합니다.
+   * 채널 규격이 다른 이미지를 합치기 위해 1채널 이미지를 3채널로 변환하는 과정을 거칩니다.
+   ![alt text](image.png)
 
-2. cv.resize()를 사용해서 이미지 사이즈를 축소합니다.
-    -> img = cv.resize(img, dsize=(0, 0), fx=0.5, fy=0.5)  여기서 이미지 사이즈를 1/2로 축소합니다.  
-
-3. cv.cvtColor()를 사용해서 이미지를 그레이스케일로 변환합니다.
-    -> gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY) 이미지를 그레이스케일로 변환합니다. 
-
-![alt text](../images/image-2.png)
-
-4. np.hstack()을 사용해서 이미지를 가로로 합칩니다.
-    -> hybrid = np.hstack((img, gray)) 이미지를 가로로 합칩니다. 
-
-![alt text](image.png)
-
-5. cv.imshow()를 사용해서 이미지를 화면에 표시합니다.
-    -> cv.imshow('Original vs Grayscale', hybrid) 이 코드로 이미지를 화면에 표시합니다. 
-
-6. cv.waitKey()를 사용해서 키보드 입력을 기다립니다.
-    -> cv.waitKey(0) 이 코드로 키보드 입력을 기다립니다. 
-
-7. cv.destroyAllWindows()를 사용해서 이미지를 화면에서 닫습니다.
-    -> cv.destroyAllWindows() 이 코드를 사용하여 이미지를 화면에서 닫습니다. 
+4. **화면 출력 및 종료 처리**
+   * `cv.imshow()`로 결과 이미지를 화면에 표시하고 `cv.waitKey(0)`으로 키 입력을 대기합니다.
+   * 입력을 받으면 `cv.destroyAllWindows()`를 호출하여 열린 모든 창을 닫고 안전하게 종료합니다.
 
 
 
