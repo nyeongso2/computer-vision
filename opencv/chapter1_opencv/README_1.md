@@ -80,4 +80,4 @@ else:  # 이미지를 정상적으로 불러왔을 경우 실행합니다.
 
 
 ## 🖼 결과물 (`1_result.jpg`)
-![alt text](image.png)
+![alt text](../images/1_result.jpg)
