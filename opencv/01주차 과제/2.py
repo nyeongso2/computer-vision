@@ -59,6 +59,6 @@ while True:  # 사용자가 종료할 때까지 무한 반복합니다.
         print(f"현재 붓 크기: {brush_size}")  # 현재 붓 크기를 터미널에 표시합니다.
 
 # 작업이 끝난 이미지를 '2_result.jpg' 파일로 저장합니다.
-cv.imwrite(r'c:\opencv_\computer-vision\opencv\2_result.jpg', img)
+cv.imwrite(r'c:\opencv_\computer-vision\opencv\01주차 과제\2_result.jpg', img)
 
 cv.destroyAllWindows()  # 열려 있는 모든 윈도우 창을 닫고 프로그램을 종료합니다.
