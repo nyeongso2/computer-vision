@@ -3,7 +3,7 @@
 본 프로젝트는 OpenCV 라이브러리를 활용한 실습 과제들을 포함하고 있습니다.
 
 ## 🛠 환경 설정 (Environment)
-*   **Python**: 3.12.x
+*   **Python**: 3.11.9
 *   **Library**: `opencv-python`, `numpy`
 *   **IDE**: `Antigravity` (Agentic AI Coding Assistant)
 
