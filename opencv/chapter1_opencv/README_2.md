@@ -70,7 +70,7 @@ while True:  # 사용자가 종료할 때까지 무한 반복합니다.
         print(f"현재 붓 크기: {brush_size}")  # 현재 붓 크기를 터미널에 표시합니다.
 
 # 작업이 끝난 이미지를 '2_result.jpg' 파일로 저장합니다.
-cv.imwrite(r'c:\opencv_\computer-vision\opencv\01주차 과제\2_result.jpg', img)
+cv.imwrite(r'c:\opencv_\computer-vision\opencv\images\2_result.jpg', img)
 
 cv.destroyAllWindows()  # 열려 있는 모든 윈도우 창을 닫고 프로그램을 종료합니다.
 
@@ -84,17 +84,19 @@ cv.destroyAllWindows()  # 열려 있는 모든 윈도우 창을 닫고 프로그
 2. **마우스 콜백 함수 정의 (`draw_circle`)**
    * 마우스 이벤트(`EVENT_LBUTTONDOWN`, `EVENT_MOUSEMOVE` 등)에 따라 원을 그리는 로직을 작성합니다.
    * `cv.circle()`의 마지막 인자를 `-1`로 설정하여 내부가 채워진 원을 그립니다.
+
    ![alt text](../images/image2-2.png)
 
 
 3. **키보드 입력 처리 루프**
    * `cv.waitKey(1)`를 사용하여 실시간으로 키 입력을 확인합니다.
    * `+`와 `-` 키 입력 시 `brush_size` 변수를 조절하며, `min/max` 함수로 범위를 1~15로 제한합니다.
+   
    ![alt text](../images/image2-3.png)
 
 4. **결과 확인 및 저장**
    * `q` 키가 입력되면 루프를 탈출하고 `cv.imwrite()`를 호출하여 최종 이미지를 저장합니다.
 
 ## 🖼 결과물 (`2_result.jpg`)
-![결과 이미지](../images/2_result.png)
+![결과 이미지](../images/2_result.jpg)
 

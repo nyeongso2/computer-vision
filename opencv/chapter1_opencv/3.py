@@ -75,7 +75,7 @@ while True:  # 사용자가 q를 눌러 종료하기 전까지 계속 돕니다.
 
     elif key == ord('s'):  # 만약 's' 키를 눌렀다면
         if roi is not None:  # 마우스로 선택해둔 영역(ROI)이 존재할 때만 실행합니다.
-            save_path = r'c:\opencv_\computer-vision\opencv\chapter1_opencv\3_result.jpg'  # 저장할 파일 경로입니다.
+            save_path = r'c:\opencv_\computer-vision\opencv\images\3_result.jpg'  # 저장할 파일 경로입니다.
             cv.imwrite(save_path, roi)  # 잘라낸 영역 데이터를 실제 이미지 파일로 저장합니다.
             print(f"이미지가 저장되었습니다: {save_path}")  # 저장 성공 메시지를 출력합니다.
         else:  # 선택한 영역이 없는데 저장을 시도했을 경우

@@ -86,7 +86,7 @@ while True:  # 사용자가 q를 눌러 종료하기 전까지 계속 돕니다.
 
     elif key == ord('s'):  # 만약 's' 키를 눌렀다면
         if roi is not None:  # 마우스로 선택해둔 영역(ROI)이 존재할 때만 실행합니다.
-            save_path = r'c:\opencv_\computer-vision\opencv\chapter1_opencv\3_result.jpg'  # 저장할 파일 경로입니다.
+            save_path = r'c:\opencv_\computer-vision\opencv\images\3_result.jpg'  # 저장할 파일 경로입니다.
             cv.imwrite(save_path, roi)  # 잘라낸 영역 데이터를 실제 이미지 파일로 저장합니다.
             print(f"이미지가 저장되었습니다: {save_path}")  # 저장 성공 메시지를 출력합니다.
         else:  # 선택한 영역이 없는데 저장을 시도했을 경우
@@ -110,13 +110,16 @@ cv.destroyAllWindows()  # 모든 창을 닫고 자원을 해제합니다.
    * 선택된 영역이 유효할 경우(크기가 0보다 클 때), 해당 부분을 별도의 윈도우 창('Selected ROI')에 즉시 띄웁니다.
    * 메인 창에는 파란색 사각형을 그려 최종 선택된 영역을 고정 표시합니다.
 
-   - 영역을 선택했을 때 
+   - 영역을 선택했을 때
+
     ![alt text](../images/image3-1.png)
 
    - 선택된 영역이 저장된 ROI 창에서 볼 수 있습니다.
+
     ![alt text](../images/image3-2.png)
     
     - 저장된 영역을 확인할 때
+
     ![alt text](../images/image3-3.png)
 
 4. **기능키 관리**
@@ -124,4 +127,4 @@ cv.destroyAllWindows()  # 모든 창을 닫고 자원을 해제합니다.
    * `s` 키 입력 시 추출된 `roi` 변수의 데이터를 실제 이미지 파일(`3_result.jpg`)로 저장합니다.
 
 ## 🖼 결과물 (`3_result.jpg`)
-![결과 이미지](../images/image3-3.png)
+![결과 이미지](../images/3_result.jpg)
